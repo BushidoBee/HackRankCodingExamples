@@ -14,8 +14,6 @@ for iteration in range(len(strperm)):
     i = 0
     iterable = ""
     while i != len(strperm[iteration]):
-        iterable = iterable + strperm[iteration][i] # Create the iteration
+        iterable = iterable + strperm[iteration][i] # Create the line; loop through each letter in iteration
         i+=1
-        # for 
-        # iterable = strperm[iteration][0] + strperm[iteration][1]
-    print(iterable) # print the interation
+    print(iterable) # print the interation on one line
