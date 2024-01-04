@@ -1,7 +1,5 @@
 ### Permutations creates all combinations of list items / iterables
 import itertools
-# Define the Alphabet in a String variable 'Alpha'
-ALPHA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 # Create a permutation and set it to a variable; Extra check: If 'string' is all UPPERCASE
 string, numchars = input().split()
@@ -10,7 +8,7 @@ strperm = sorted(list(itertools.permutations(string, num))) # Note: Slicing the 
 print (strperm)
 
 # Print the permutations in alphabetical order using a loop; remove the selection from the list
-for iteration in len(strperm):
+for iteration in range(len(strperm)):
     iterable = strperm[iteration][0] + strperm[iteration][1]
     print(iterable) # print the interation
         
