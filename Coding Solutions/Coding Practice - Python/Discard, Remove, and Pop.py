@@ -1,17 +1,25 @@
 n = int(input())
 s = set(map(int, input().split()))
-ticks = int(input())
-while (ticks > 0):
-    ticks-=1
-    action = input().split()
+
+for i in range(int(input())):
+    command = input().split()
     
-    if action[0] == 'pop' and :
+    if command[0] == 'discard':
+        # print("Loop ", i, " | option #1: ", command[0], " ", command[1])
+        s.discard(int(command[1]))
+        # print(s)
+        
+    elif command[0] == 'remove' and int(command[1]) in s:
+        # print("Loop ", i, " | option #2: ", command[0], " ", command[1])
+        s.remove(int(command[1]))
+        # print(s)
+        
+    elif command[0] == 'pop':
+        # print("Loop ", i, " | option #3: ", command[0])
         s.pop()
-    if action[0] == 'remove' and action[1] in s:
-        s.remove(int(action[1]))
-    if action[0] == 'discard':
-        s.discard(int(action[1]))
+        # print(s)
+        
     else:
-        break
+        continue
         
 print(sum(s))
